@@ -1,7 +1,7 @@
 # gta5ucp
 Hier findet Ihr alle Dateien zur Youtube Tutorialreihe für das GTA 5 UCP:
 
-(Aufbaut auf PHP/Laravel, HTML, CSS, Javascript)
+(Aufgebaut auf PHP/Laravel, HTML, CSS, Javascript)
 
 Weitere Links:
 
