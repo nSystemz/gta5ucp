@@ -19,3 +19,5 @@ Route::get('/dashboard', [HomeController::class, 'index']);
 
 Route::get('/login', [HomeController::class, 'index'])->name('login');
 Route::post('/postlogin', [HomeController::class, 'postlogin'])->name('postlogin');
+
+Route::get('/cars', [HomeController::class, 'getCars'])->name('getCars');

@@ -7,6 +7,9 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="/dashboard" class="nav-link">Dashboard</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/cars" class="nav-link">Fahrzeuge</a>
+        </li>
     </ul>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">

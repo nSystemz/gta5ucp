@@ -4,20 +4,16 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Dashboard</h1>
+            <h1>Fahrzeuge</h1>
           </div>
         </div>
       </div>
     </section>
     <section class="content">
-      @if($message = Session::get('error'))
-      <div class="alert alert-danger text-center" role="alert">
-        <strong>{{$message}}</strong>
-      </div>
-      @endif
+      @foreach ($vehicles as $data )
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Accountsstats von {{Auth::user()->name}}</h3>
+          <h3 class="card-title">Fahrzeug: {{$data->vehicleName}}</h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
@@ -28,13 +24,11 @@
           </div>
         </div>
         <div class="card-body">
-          Geld: {{Auth::user()->geld}}$
+          Tank: {{$data->fuel}}l
           <br>
-          Adminlevel: {{Auth::user()->adminlevel}}
-          <br>
-          Fraktion/Rang: {{Auth::user()->fraktion}} - {{Auth::user()->rang}}
-          <br>
+          Position: {{$data->posX}}, {{$data->posY}}, {{$data->posZ}}, {{$data->posA}}
         </div>
       </div>
+      @endforeach
     </section>
 @endsection

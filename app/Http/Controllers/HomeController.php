@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -55,6 +55,23 @@ class HomeController extends Controller
             {
                 return Redirect::to('login')->withInput($request->all())->with('error', 'Ungültige Eingaben!');
             }
+        }
+    }
+
+    public function getCars()
+    {
+        if(Auth::check()) {
+            $count = DB::table('fahrzeuge')->where('owner', Auth::user()->id)->count();
+            if($count <= 0)
+            {
+                return Redirect::to('dashboard')->with('error','Keine Fahrzeuge vorhanden!');
+            }
+            $vehicles = DB::table('fahrzeuge')->where('owner', Auth::user()->id)->get();
+            return view('cars', ['vehicles' => $vehicles]);
+        }
+        else
+        {
+            return Redirect::to('login')->with('error', 'Kein Login!');
         }
     }
 }
