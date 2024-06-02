@@ -1,4 +1,4 @@
-# gta5ucp
+# 🌐 gta5ucp 🌐
 Hier findet Ihr alle Dateien zur Youtube Tutorialreihe für das GTA 5 UCP:
 
 (Aufgebaut auf PHP/Laravel, HTML, CSS, Javascript)
@@ -13,6 +13,6 @@ Forum: https://forum.nemesus.de
 
 Discord (Support und Smalltalk): https://discord.nemesus.de
 
-Ihr wollt uns unterstützen? https://ko-fi.com/nemesustv
+☕ Ihr wollt uns unterstützen? https://ko-fi.com/nemesustv ☕
 
 Viel Spass!
